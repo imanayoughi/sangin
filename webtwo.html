@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ir-fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="bootstrap-5.2.3-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="sas.css">
+    <style>
+        .big-footer {
+            background: linear-gradient(180deg, #d32f2f, #000000);
+            color: #ffffff;
+            padding: 60px 20px 30px;
+            font-family: Arial, sans-serif;
+        }
+
+        .big-footer .footer-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .big-footer .footer-section {
+            flex: 1 1 200px;
+            min-width: 180px;
+        }
+
+        .big-footer .footer-section h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ffffff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .big-footer .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .big-footer .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .big-footer .footer-section ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .big-footer .footer-section ul li a:hover {
+            color: #ff6666;
+            transform: translateX(5px);
+        }
+
+        .big-footer .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            padding-top: 15px;
+            font-size: 14px;
+        }
+
+        
+        @media (max-width: 992px) {
+            .big-footer .footer-top {
+                flex-direction: column;
+                gap: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="picture/logotwo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">ویجیاتو</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">پر طرفدار ها</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            تیم ویجیاتو
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">تماس با ما</a></li>
+                            <li><a class="dropdown-item" href="#">فرصت های شغلی</a></li>
+                            <li><a class="dropdown-item" href="#">اعضای اجرایی ویجیاتو</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-lightbulb-off-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M2 6c0-.572.08-1.125.23-1.65l8.558 8.559A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m10.303 4.181L3.818 1.697a6 6 0 0 1 8.484 8.484zM5 14.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5M2.354 1.646a.5.5 0 1 0-.708.708l12 12a.5.5 0 0 0 .708-.708z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-slash-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- tittle -->
+    <header class="row justify-content-evenly p-5 m-3">
+        <div class="col-12 col-md-3 mb-3">
+            <a href="webthree.html" class="btn bg-danger text-light w-100 p-3"> بهترین بازی های دهه اخیر</a>
+        </div>
+        <div class="col-12 col-md-3 mb-3">
+            <a href="webtwo.html" class="btn bg-danger text-light w-100 p-3"> فیلم و سریال </a>
+        </div>
+        <div class="col-12 col-md-3 mb-3">
+            <a href="webfour.html" class="btn bg-danger text-light w-100 p-3"> اعضای تیم ویجیاتو</a>
+        </div>
+    </header>
+    <!-- main-content -->
+    <h1 class="text-danger">فیلم و سرریال</h1>
+    <div class="container my-4">
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8 col-12">
+                <p class="fs-5">فیلم و سریال فقط قصه‌ گفتن نیست؛ سفریه به جهان احساس، معنا و خیال. هر اثر پنجره‌ایه به
+                    تجربه‌های انسانی، از هیجان و عشق گرفته تا ترس و امید. در بخش فیلم و سریال، روایت‌هایی رو مرور
+                    می‌کنیم که ذهن رو درگیر و قلب رو همراه می‌کنن؛ داستان‌هایی که بعد از تماشاشون هنوز تموم نمی‌شن</p>
+            </div>
+            <div class="col-md-4 col-12 text-center mb-3 mb-md-0">
+                <img src="picture/sinama.jpg" class="img-fluid rounded" alt="ps">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- links -->
+    <nav class="d-flex justify-content-evenly">
+        <a href="#" class="btn text-primary">ایرانی</a>
+        <a href="#" class="btn text-primary">سریال</a>
+        <a href="#" class="btn text-primary">ترسناک</a>
+        <a href="#" class="btn text-primary">رمانتیک و عاشقانه</a>
+        <a href="#" class="btn text-primary">اکشن</a>
+        <a href="#" class="btn text-primary">سینمایی</a>
+        <a href="#" class="btn text-primary">کودکانه</a>
+    </nav>
+    <hr>
+    <!-- movies -->
+    <div class="container my-4">
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8 col-12">
+                <div class="col-md-4 col-12 text-center mb-3 mb-md-0">
+                    <img src="picture/vahshi.jpg" class="img-fluid rounded" alt="ps">
+                </div>
+                <p class="fs-5"> سریال «وحشی» (The Savage) یک مینی‌سریال ایرانی در ژانر جنایی، درام و معمایی است که توسط
+                    هومن سیدی نوشته و کارگردانی شده و در سال ۲۰۲۵ از پلتفرم فیلم‌نت پخش شد.
+                    داستان حول محور داوود اشرف (با بازی جواد عزتی) می‌چرخد؛ مردی که پس از یک قتل تصادفی وارد زندان
+                    می‌شود و در جریان خشونت‌ها و بی‌عدالتی‌های محیط زندان، به تدریج دچار تحولات عمیق روانی و تاریکی
+                    می‌شود.
+                    این سریال با الهام از یک پرونده واقعی ساخته شده و تلاش دارد به بررسی پیامدهای خشونت، عدالت و هویت
+                    انسانی بپردازد.
+                    «وحشی» از بازیگران شناخته‌شده‌ای مثل نگار جواهریان، احسان امانی و علیرضا ثانی‌فر بهره می‌برد که به
+                    فضاسازی دراماتیک و پرکشش اثر کمک می‌کنند.
+                    ساختار داستانی این سریال پرتعلیق، با لحظات تنش‌آور و پیچش‌های شخصیتی، آن را به یکی از آثار برجسته و
+                    پرطرفدار شبکه نمایش خانگی ایران تبدیل کرده است.
+                    سریال هم در فصل اول و هم در فصل دوم ادامه پیدا کرده و با استقبال مخاطبان مواجه شده است، چون روایت
+                    تاریک و واقع‌گرایانه‌ای از پیامدهای زندگی در جامعه و نظام کیفری ارائه می‌دهد</p>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="container my-4">
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8 col-12">
+                <p class="fs-5"> سال انتشار: ۲۰۲۵
+                    امتیاز آی ام دی بی: ۷.۲/۱۰
+                    اگر دنبال فیلم سینمایی ترسناک جدید هستید، او را برگردان، یکی از پرسروصداترین فیلم‌های این روزهاست که
+                    سینمای استرالیا زحمت آن را کشیده.
+
+                    پایپر و اندی، خواهر و برادر ناتنی‌ای هستند که والدین خود را در یک سانحه از دست داده‌اند، اما تا سه
+                    ماه دیگر که اندی به سن قانونی برسند، مجبورند با یک سرپرست موقت زندگی کنند. زنی به نام لارا آن‌دو را
+                    به‌ سرپرستی می‌گیرد و به خانه‌ای ایزوله در دل جنگل می‌برد. اما از همان ابتدا، مشخص است که این خانه و
+                    این زن، مرموزند و این مسئله کمی خواهر و برادر داستان را دل‌نگران می‌کند. اما این زن چه مسئله‌ای
+                    دارد؟ آیا او عضو فرقه‌ای عجیب است؟ چقدر هدفی که دارد حاضر است پیش برود؟
+
+                    این فیلم ترسناک جدید ۲۰۲۵ که حسابی هم پرطرفدار واقع شده، پیشنهاد این روزهای ما به شماست.</p>
+            </div>
+            <div class="col-md-4 col-12 text-center mb-3 mb-md-0">
+                <img src="picture/khofnakk.jpg" class="img-fluid rounded" alt="ps">
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="container my-4">
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8 col-12">
+                <div class="col-md-4 col-12 text-center mb-3 mb-md-0">
+                    <img src="picture/eshghi.jpg" class="img-fluid rounded" alt="ps" width="100%">
+                </div>
+                <p class="fs-5"> اثر روانشناختی YOU، یکی از بهترین سریال های عاشقانه خارجی در یک دهه اخیر است. این سریال
+                    با تم روانشناختی و عاشقانه براساس کتاب‌های نویسنده‌ای معروف با نام کارولین پکس تولید شده است. سریال
+                    تو روایت‌گر زندگی گلدبرگ، مدیر بسیار جوان یکی از کسب‌وکارهای معروف آمریکا است. او به عنوان مدیر یک
+                    کتابفروشی، به شکل ناگهانی و تحت فشارهای گوناگون در زندگی‌اش به جنایت و قتل‌های سریالی روی می‌آورد!
+                    درواقع کمتر کسی فکرش را می‌کند که یک کتابفروش دست به قتل‌های سریالی بزند؛ حتی خود شما با خواندن چنین
+                    ایده‌ای بدون شک بسیار تعجب کرده‌اید. در گیرودار قتل‌هایی که انجام می‌دهد، در دام ماجراجویی عاشقانه
+                    می‌افتد که باعث می‌شود تا در یک دوگانگی و کشاکش میان مرگ و زندگی قرار بگیرد.</p>
+            </div>
+        </div>
+    </div>
+    <!-- imdb -->
+    <hr>
+    <h2 class="text-danger">رتبه بندی فیلم های 2026 از نظر منقدین ویجیاتو </h2>
+    <br><br>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>رتبه</th>
+                    <th>نام فیلم</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Project Hail Mary</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>The Odyssey</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Avengers: Doomsday</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Star Wars: The Mandalorian and Grogu</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Moana (Live‑Action)</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Supergirl</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>28 Years Later: The Bone Temple</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ending button -->
+    <div class="text-center mb-5 mt-5">
+        <a href="#" class="btn bg-danger text-light p-5"> برای دریافت لیست بلند تر و دانلود فیلم های پر بیننده کلیک
+            کنید</a>
+    </div>
+
+    <!-- footer -->
+    <footer class="big-footer">
+        <div class="footer-top">
+            <div class="footer-section">
+                <h4>درباره ما</h4>
+                <ul>
+                    <li><a href="#">داستان ما</a></li>
+                    <li><a href="#">تیم ما</a></li>
+                    <li><a href="#">فرصت‌های شغلی</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>خدمات</h4>
+                <ul>
+                    <li><a href="#">پشتیبانی</a></li>
+                    <li><a href="#">مشاوره</a></li>
+                    <li><a href="#">محصولات</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>ارتباط</h4>
+                <ul>
+                    <li><a href="#">تماس با ما</a></li>
+                    <li><a href="#">ایمیل</a></li>
+                    <li><a href="#">شبکه‌های اجتماعی</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>سیاست‌ها</h4>
+                <ul>
+                    <li><a href="#">حریم خصوصی</a></li>
+                    <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+header:hover {
+  background-color: rgb(156, 22, 22);
+  transition: 1s;
+}/*# sourceMappingURL=sas.css.map */

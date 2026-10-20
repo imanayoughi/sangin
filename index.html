@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="Ir-fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="bootstrap-5.2.3-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="sas.css">
+    <style>
+        .big-footer {
+            background: linear-gradient(180deg, #d32f2f, #000000);
+            color: #ffffff;
+            padding: 60px 20px 30px;
+            font-family: Arial, sans-serif;
+        }
+
+        .big-footer .footer-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .big-footer .footer-section {
+            flex: 1 1 200px;
+            min-width: 180px;
+        }
+
+        .big-footer .footer-section h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ffffff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .big-footer .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .big-footer .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .big-footer .footer-section ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .big-footer .footer-section ul li a:hover {
+            color: #ff6666;
+            transform: translateX(5px);
+        }
+
+        .big-footer .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            padding-top: 15px;
+            font-size: 14px;
+        }
+
+        
+        @media (max-width: 992px) {
+            .big-footer .footer-top {
+                flex-direction: column;
+                gap: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="picture/logotwo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">ویجیاتو</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">پر طرفدار ها</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            تیم ویجیاتو
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">تماس با ما</a></li>
+                            <li><a class="dropdown-item" href="#">فرصت های شغلی</a></li>
+                            <li><a class="dropdown-item" href="#">اعضای اجرایی ویجیاتو</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-lightbulb-off-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M2 6c0-.572.08-1.125.23-1.65l8.558 8.559A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m10.303 4.181L3.818 1.697a6 6 0 0 1 8.484 8.484zM5 14.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5M2.354 1.646a.5.5 0 1 0-.708.708l12 12a.5.5 0 0 0 .708-.708z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-slash-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- tittle -->
+    <header class="row justify-content-evenly p-5 m-3">
+        <div class="col-12 col-md-3 mb-3">
+            <a href="webthree.html" class="btn bg-danger text-light w-100 p-3"> بهترین بازی های دهه اخیر</a>
+        </div>
+        <div class="col-12 col-md-3 mb-3">
+            <a href="webtwo.html" class="btn bg-danger text-light w-100 p-3"> فیلم و سریال </a>
+        </div>
+        <div class="col-12 col-md-3 mb-3">
+            <a href="webfour.html" class="btn bg-danger text-light w-100 p-3"> اعضای تیم ویجیاتو</a>
+        </div>
+    </header>
+    <!-- main -->
+    <section>
+        <h1 class="text-danger mt-5 mb-4 p-5">پیشنهاد ویجیاتو</h1>
+
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- true مهم !!! -->
+            <!-- نقاط پایین (Indicators) -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5"></button>
+            </div>
+
+            <!-- اسلایدها -->
+            <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade"> -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- اضافه کردن اینتروال بعد از کروزل ایتم -->
+                    <img src="picture/posterone.webp" class="d-block w-75 mx-auto" height="500px" alt="اسلاید اول">
+                    <div class="carousel-caption d-none d-md-block bg-danger">
+                        <h5 class="text-light">بهترین فیلم های سال 2025</h5>
+                        <p class="text-light">از سوپرمن تا سفید برفی</p>
+                        <a href="#" class="btn text-danger bg-light">مطالعه میکنم</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="picture/postertwo.jpg" class="d-block w-75 mx-auto" height="500px" alt="اسلاید دوم">
+                    <div class="carousel-caption d-none d-md-block bg-danger">
+                        <h5 class="text-light">بازی شبح یوتی</h5>
+                        <p class="text-light">نسخه ی اسپین آف از بازی شبح توشیما</p>
+                        <a href="#" class="btn text-danger bg-light">مطالعه میکنم</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="picture/posterthree.webp" class="d-block w-75 mx-auto" height="500px" alt="اسلاید سوم">
+                    <div class="carousel-caption d-none d-md-block bg-danger">
+                        <h5 class="text-light">قطع سراسری اینترنت ایران</h5>
+                        <p class="text-light">ضرر های مالی به بازار کسب کار اینترنتی</p>
+                        <a href="#" class="btn text-danger bg-light">مطالعه میکنم</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="picture/posterfour.jpg" class="d-block w-75 mx-auto" height="500px" alt="اسلاید سوم">
+                    <div class="carousel-caption d-none d-md-block bg-danger opacity-75">
+                        <h5 class="text-light">چرا در دنیای همیشه انلاین ما افلاین زندگی خودمان را میگذارنیم؟</h5>
+                        <a href="#" class="btn text-danger bg-light">مطالعه میکنم</a>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="picture/posterfive.webp" class="d-block w-75 mx-auto" height="500px" alt="اسلاید سوم">
+                    <div class="carousel-caption d-none d-md-block bg-danger">
+                        <h5 class="text-light">بهترین نسخه های بازی رزیدنت اویل</h5>
+                        <p class="text-light">نقد و برسی بازی رزیدنت اویل</p>
+                        <a href="#" class="btn text-danger bg-light">مطالعه میکنم</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="picture/postersix.jpg" class="d-block w-75 mx-auto" height="500px" alt="اسلاید سوم">
+                    <div class="carousel-caption d-none d-md-block bg-danger opacity-75">
+                        <h5 class="text-light">50 فیلم ترسناک برتر</h5>
+                        <p class="text-light">رده بندی عناوین ترسناک</p>
+                        <a href="#" class="btn text-danger bg-light">مطالعه میکنم</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- کنترل‌ها (فلش‌ها) -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- news -->
+    <h2 class="text-danger mb-5 mt-4 p-5">تازه ترین اخبار</h2>
+    <div class="container my-4">
+        <div class="row align-items-center mb-4">
+            <div class="col-md-4 col-12 text-center mb-3 mb-md-0">
+                <img src="picture/ps1.webp" class="img-fluid rounded" alt="ps">
+            </div>
+            <div class="col-md-8 col-12">
+                <p class="fs-5">کنسول پلی‌استیشن ۶ (PS6) هنوز به‌صورت رسمی معرفی نشده و اطلاعات موجود درباره آن در حد گمانه‌زنی است.
+                انتظار می‌رود سونی روی قدرت پردازشی بالاتر، هوش مصنوعی پیشرفته‌تر و گرافیک واقع‌گرایانه‌تر تمرکز کند.
+                احتمالاً زمان عرضه آن چند سال بعد از PS5 و در نیمه دوم دهه ۲۰۲۰ خواهد بود.
+                پشتیبانی بهتر از واقعیت مجازی، ردیابی پرتو (Ray Tracing) نسل جدید و لودینگ سریع‌تر از انتظارات کاربران
+                است.
+                فعلاً هر خبری درباره PS6 غیررسمی است و باید منتظر اعلام‌های رسمی سونی ماند.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container my-4">
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8 col-12">
+                  <p class="fs-5">در حال حاضر ایلان ماسک و شرکت‌های زیرمجموعه‌اش (مثل SpaceX و تسلا) هنوز هیچ گوشی هوشمند رسمی معرفی یا
+                عرضه نکرده‌اند؛ هرچند شایعات درباره ساخت یک «گوشی استارلینک» یا «Tesla Phone» منتشر شده بود.
+                این شایعات می‌گفتند که گوشی می‌تواند به اینترنت ماهواره‌ای Starlink وصل شود و فناوری‌های آینده‌نگر مثل
+                هوش مصنوعی داشته باشد، اما تا کنون تأیید رسمی نشده است.
+                ایلان ماسک خودش هم اخیراً اعلام کرده که فعلاً دستگاهی در حال توسعه نیست و گزارشی درباره گوشی را رد کرده
+                است.
+                برخی گزارش‌ها اشاره کرده‌اند که ممکن است در آینده چنین محصولی با تمرکز روی AI و اتصال مستقیم ماهواره‌ای
+                طراحی شود، اما هیچ تاریخ مشخص یا جزئیات رسمی منتشر نشده است.
+                پس فعلاً گوشی جدیدی از ایلان ماسک واقعی نیست و بیشتر در حد گمانه‌زنی و شایعه در رسانه‌ها مطرح بوده است.
+            </p>
+                </div>
+                <div class="col-md-4 col-12 text-center mb-3 mb-md-0">
+                    <img src="picture/ilan.jpg" class="img-fluid rounded" alt="ps">
+                </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container my-4">
+        <div class="row align-items-center mb-4">
+            <div class="col-md-4 col-12 text-center mb-3 mb-md-0">
+                <img src="picture/bazi.jpg" class="img-fluid rounded" alt="ps">
+            </div>
+            <div class="col-md-8 col-12">
+                <p class="fs-5">بازی Shadow Fight 3 یک عنوان مبارزه‌ای اکشن با المان‌های RPG است که توسط شرکت Nekki ساخته و منتشر شده و
+                نسخهٔ سوم از سری محبوب Shadow Fight محسوب می‌شود.
+                در این نسخه، کاراکترها به‌جای سایه‌های دوبعدی، مدل‌های سه‌بعدی با گرافیک حرفه‌ای دارند و بازیکن می‌تواند
+                ظاهر، مهارت‌ها و تجهیزات قهرمانش را شخصی‌سازی کند.
+                گیم‌پلی شامل مبارزات تن‌به‌تن، انتخاب سلاح و سبک‌های مبارزه مختلف از سه گروه متفاوت و پیشرفت در داستانی
+                جذاب است.
+                بازیکنان می‌توانند از روش‌های مختلف مانند فروشگاه درون‌بازی، ماموریت‌ها و چالش‌ها برای ارتقاء تجهیزات،
+                مهارت‌ها و منابع استفاده کنند.
+                همچنین بازی حالت‌های PvP، رویدادهای ویژه و رقابت با دیگر بازیکنان را هم ارائه می‌دهد که تجربه‌ای پویا و
+                چالش‌برانگیز فراهم می‌کند.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container my-4">
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8 col-12">
+                <p class="fs-5">نینتندو اخیراً نسل جدید کنسول خودش رو با نام Nintendo Switch 2 عرضه کرده که یک دستگاه ترکیبی قابل‌حمل و
+                خانگیه و در ۵ ژوئن ۲۰۲۵ معرفی و منتشر شد.
+                این کنسول صفحه‌نمایش بزرگ‌تر، قدرت گرافیکی بهتر، کنترلرهای جدید و پشتیبانی از بازی‌های قبلی سوییچ رو
+                داره.
+                Switch 2 می‌تونه هم به صورت دستی بازی بشه و هم با داک به تلویزیون وصل بشه و در رزولوشن 4K اجرا کنه.
+                این مدل در فروش، سریع‌ترین کنسول تاریخ نینتندو بوده و میلیون‌ها نسخه در بازار فروخته.
+                نینتندو با این کنسول سعی کرده تجربه‌ای مدرن‌تر و قدرتمندتر از سوییچ اصلی ارائه بده، هم برای بازی‌های
+                انحصاری و هم برای عناوین سوم‌شخص بزرگ.</p>
+                </div>
+                <div class="col-md-4 col-12 text-center mb-3 mb-md-0">
+                    <img src="picture/nin.webp" class="img-fluid rounded" alt="ps">
+                </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <!-- social -->
+    <section class="d-flex w-75 text-center mb-5">
+        <div>
+            <img src="picture/digivigi.jpg" alt="soci" width="70%">
+        </div>
+        <div>
+            <h3 class="text-danger"> مارا در شبکه های مجازی دنبال کنید</h3>
+            <p>تیم ویجی را در تمام وب سایت ها و برنامه های اجتماعی دنبال کنید !</p>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="big-footer">
+        <div class="footer-top">
+            <div class="footer-section">
+                <h4>درباره ما</h4>
+                <ul>
+                    <li><a href="#">داستان ما</a></li>
+                    <li><a href="#">تیم ما</a></li>
+                    <li><a href="#">فرصت‌های شغلی</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>خدمات</h4>
+                <ul>
+                    <li><a href="#">پشتیبانی</a></li>
+                    <li><a href="#">مشاوره</a></li>
+                    <li><a href="#">محصولات</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>ارتباط</h4>
+                <ul>
+                    <li><a href="#">تماس با ما</a></li>
+                    <li><a href="#">ایمیل</a></li>
+                    <li><a href="#">شبکه‌های اجتماعی</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>سیاست‌ها</h4>
+                <ul>
+                    <li><a href="#">حریم خصوصی</a></li>
+
+
+
+                    <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

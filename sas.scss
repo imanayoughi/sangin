@@ -1,0 +1,11 @@
+$codz: rgb(156, 22, 22);
+*{
+    box-sizing: border-box;
+}
+header{
+   &:hover{
+    background-color: $codz;
+    transition: 1s;
+   }
+}
+
