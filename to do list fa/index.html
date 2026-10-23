@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-top">
+            <h1>TODO</h1>
+
+            <button class="theme-toggle" id="themeToggle"
+                    aria-label="Toggle dark mode">
+                <span id="themeIcon">☾</span>
+            </button>
+        </div>
+
+        <p class="hero-subtitle">A little progress every day.</p>
+    </header>
+
+    <main class="container">
+
+        <form class="new-todo" id="todoForm">
+            <span class="empty-circle"></span>
+
+            <input
+                type="text"
+                id="todoInput"
+                placeholder="Create a new todo..."
+                autocomplete="off"
+                maxlength="180"
+                aria-label="New todo"
+                required
+            >
+
+            <button type="submit" class="add-button"
+                    aria-label="Add todo">+</button>
+        </form>
+
+        <section class="todo-card" aria-label="Todo list">
+
+            <ul class="todo-list" id="todoList"></ul>
+
+            <div class="todo-footer">
+                <span id="itemsLeft">0 items left</span>
+
+                <button id="clearCompleted" class="text-button">
+                    Clear Completed
+                </button>
+            </div>
+        </section>
+
+        <nav class="filters" aria-label="Filter todos">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="active">Active</button>
+            <button class="filter" data-filter="completed">Completed</button>
+        </nav>
+
+        <p class="hint">Drag your plans into action ✦</p>
+
+    </main>
+
+    <footer class="page-footer">
+        Made for your everyday goals <span>♥</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>

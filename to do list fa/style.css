@@ -1,0 +1,454 @@
+
+:root {
+    --blue: #477fd7;
+    --blue-dark: #315fae;
+    --blue-light: #eaf3ff;
+    --page: #f4f7fc;
+    --card: #ffffff;
+    --text: #555e70;
+    --muted: #929bad;
+    --border: #edf0f5;
+    --shadow: 0 12px 35px rgba(43, 76, 130, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--page);
+    color: var(--text);
+    font-family: "Josefin Sans", sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Header */
+
+.hero {
+    height: 310px;
+    padding: 62px 24px 0;
+    color: white;
+    background:
+        radial-gradient(ellipse at 15% 20%, rgba(116, 174, 255, 0.8), transparent 38%),
+        radial-gradient(ellipse at 85% 15%, rgba(32, 92, 181, 0.75), transparent 42%),
+        linear-gradient(145deg, #77b7f2 0%, #578bdc 45%, #354f9c 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    width: 120%;
+    left: -10%;
+    border-radius: 50% 50% 0 0;
+}
+
+.hero::before {
+    height: 180px;
+    bottom: -85px;
+    background: rgba(222, 237, 255, 0.25);
+    transform: rotate(-5deg);
+}
+
+.hero::after {
+    height: 145px;
+    bottom: -100px;
+    background: rgba(28, 66, 135, 0.23);
+    transform: rotate(6deg);
+}
+
+.hero-top {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 58px);
+    letter-spacing: 15px;
+    font-weight: 700;
+}
+
+.theme-toggle {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.14);
+    color: white;
+    font-size: 30px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: rotate(-12deg);
+}
+
+.hero-subtitle {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 13px auto 0;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.83);
+}
+
+/* Main content */
+
+.container {
+    width: min(520px, calc(100% - 36px));
+    margin: -66px auto 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.new-todo {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 22px;
+    background: var(--card);
+    border-radius: 9px;
+    box-shadow: var(--shadow);
+    margin-bottom: 36px;
+}
+
+.empty-circle {
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+    border: 1px solid #dce2ec;
+    border-radius: 50%;
+}
+
+.new-todo input {
+    width: 100%;
+    min-width: 0;
+    height: 60px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 16px;
+}
+
+.new-todo input::placeholder {
+    color: var(--muted);
+}
+
+.add-button {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--blue);
+    color: white;
+    font-size: 25px;
+    display: grid;
+    place-items: center;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.add-button:hover {
+    background: var(--blue-dark);
+    transform: scale(1.06);
+}
+
+/* Todo items */
+
+.todo-card {
+    overflow: hidden;
+    background: var(--card);
+    border-radius: 9px;
+    box-shadow: var(--shadow);
+}
+
+.todo-list {
+    list-style: none;
+}
+
+.todo-item {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border);
+    animation: appear 0.22s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.check-button {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid #dce2ec;
+    border-radius: 50%;
+    background: transparent;
+    color: white;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.check-button:hover {
+    border-color: var(--blue);
+}
+
+.todo-item.completed .check-button {
+    border-color: transparent;
+    background: linear-gradient(135deg, #81c8f5, #527fdf);
+}
+
+.todo-text {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 16px;
+    line-height: 1.45;
+    transition: color 0.2s;
+}
+
+.todo-item.completed .todo-text {
+    color: #a6adba;
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+}
+
+.delete-button {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: #a4adbd;
+    font-size: 23px;
+    opacity: 0;
+    transition: opacity 0.2s, color 0.2s, background 0.2s;
+}
+
+.todo-item:hover .delete-button,
+.delete-button:focus-visible {
+    opacity: 1;
+}
+
+.delete-button:hover {
+    color: #e05b70;
+    background: #fff0f2;
+}
+
+.empty-state {
+    padding: 35px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Footer and filters */
+
+.todo-footer {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 24px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.text-button {
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.text-button:hover {
+    color: var(--blue);
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 24px;
+    padding: 19px 14px;
+    background: var(--card);
+    border-radius: 9px;
+    box-shadow: var(--shadow);
+}
+
+.filter {
+    padding: 4px 0;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.filter:hover,
+.filter.active {
+    color: var(--blue);
+}
+
+.hint {
+    margin-top: 32px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.page-footer {
+    padding: 0 18px 24px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.page-footer span {
+    color: #e66e87;
+}
+
+/* Dark theme */
+
+body.dark {
+    --page: #151d2d;
+    --card: #202b40;
+    --text: #dce5f5;
+    --muted: #96a6bf;
+    --border: #303d53;
+    --shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+body.dark .hero {
+    background:
+        radial-gradient(ellipse at 15% 20%, #415f9a, transparent 40%),
+        linear-gradient(145deg, #263c64, #18243c 80%);
+}
+
+body.dark .empty-circle,
+body.dark .check-button {
+    border-color: #53627b;
+}
+
+body.dark .todo-item.completed .todo-text {
+    color: #78869d;
+}
+
+body.dark .delete-button:hover {
+    background: #432b3b;
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+    .hero {
+        height: 270px;
+        padding: 54px 24px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: 12px;
+    }
+
+    .container {
+        margin-top: -64px;
+        width: calc(100% - 32px);
+    }
+
+    .new-todo {
+        min-height: 70px;
+        gap: 13px;
+        padding: 0 18px;
+        margin-bottom: 28px;
+    }
+
+    .new-todo input {
+        font-size: 15px;
+    }
+
+    .todo-item {
+        min-height: 72px;
+        padding: 17px 18px;
+        gap: 13px;
+    }
+
+    .todo-text {
+        font-size: 15px;
+    }
+
+    .delete-button {
+        opacity: 1;
+    }
+
+    .todo-footer {
+        padding: 16px 18px;
+        font-size: 12px;
+    }
+
+    .text-button {
+        font-size: 12px;
+    }
+
+    .filters {
+        gap: 22px;
+        padding: 19px 8px;
+    }
+
+    .filter {
+        font-size: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
